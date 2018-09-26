@@ -1947,6 +1947,11 @@ input, select, textarea {
 		font-size: 0.8em;
 		margin-top: -0.6em;
 	}
+	
+	#footer h4{
+		margin-bottom: 0em;
+		margin-top:1em;
+	}
 
 	header.major {
 		text-align: center;
@@ -2326,7 +2331,7 @@ input, select, textarea {
 			}
 
 			ul.icons-grid li:nth-child(2n + 1) {
-				box-shadow: inset -1px 0 0 0 #dddddd, 1px 0 0 0 #dddddd;
+/* 				box-shadow: inset -1px 0 0 0 #dddddd, 1px 0 0 0 #dddddd; */
 			}
 
 			ul.icons-grid li:nth-child(2n + 3):before {
@@ -3131,3 +3136,26 @@ input, select, textarea {
 				}
 
 	}
+	
+div.lista{
+	text-align: center;
+}	
+
+div.lista ul.lista{
+	text-align: left;
+	display: inline-block;
+}
+	
+	
+	
+/* google maps*/	
+.mapouter{
+	text-align:center;
+	height:400px
+}
+
+.gmap_canvas {
+	overflow:hidden;
+	background:none!important;
+	height:100%	
+}	
