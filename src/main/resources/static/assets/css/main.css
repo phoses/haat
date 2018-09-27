@@ -2180,7 +2180,7 @@ input, select, textarea {
 			font-family: FontAwesome;
 			font-style: normal;
 			font-weight: normal;
-			text-transform: none !important;
+/* 			text-transform: none !important; */
 		}
 
 		.icon > .label {
@@ -3145,7 +3145,10 @@ div.lista ul.lista{
 	text-align: left;
 	display: inline-block;
 }
-	
+
+#loading{
+	display:none;
+}
 	
 	
 /* google maps*/	

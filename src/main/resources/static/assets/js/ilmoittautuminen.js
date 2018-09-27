@@ -2,12 +2,19 @@ $(document).ready(function() {
 
 	$('#ilmoittautuminen').click(function() {
 
+		$('#ilmoittautuminen').prop("disabled",true);
+		
+		$('#loading').show();
+		
 		$.post("/email", $("#lomake").serialize()).done(function() {
 			$('.success').show();
 			$('#lomake').hide();
+			$('#loading').hide();
 		}).fail(function(error) {
+			$('#ilmoittautuminen').prop("disabled",false);
 			console.log(error);
 			$('.error').show();
+			$('#loading').hide();			
 		});
 
 	});
