@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class Redirect {
 
-	@RequestMapping("/paivallinen")
+	@RequestMapping({"/paivallinen", "/iltajuhla"})
 	public String home() {
 		return "index";
 	}

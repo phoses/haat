@@ -1,6 +1,5 @@
 package com.tjo.haat.email;
 
-import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 
 import org.slf4j.Logger;
@@ -22,7 +21,7 @@ public class EmailSender {
 	@Value("${emailsend.active:false}")
 	Boolean emailsendActive;
 	
-	private String[] receivers = {"ollipekka.lehtonen@saunalahti.fi"};
+	private String[] receivers = {"lehtonenop@gmail.com", "titta.pauliina.kallio@gmail.com"};
 	
 	public void sendEmail(String content) throws Exception{
 		

@@ -85,7 +85,7 @@ input, select, textarea {
 	html {
 		background-color: #313a3d;
 		background-attachment: fixed,						fixed;
-		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+		background-image: url("images/overlay.png"), url("../../images/back.jpg");
 		background-position: top left,					center center;
 		background-repeat: repeat,						none;
 		background-size: auto,						cover;
@@ -1948,6 +1948,11 @@ input, select, textarea {
 		margin-top: -0.6em;
 	}
 	
+	#footer h3{
+		margin-bottom: 0em;
+		margin-top:2.5em;
+	}
+	
 	#footer h4{
 		margin-bottom: 0em;
 		margin-top:1em;
@@ -2738,7 +2743,7 @@ input, select, textarea {
 			}
 
 			.main .container:before {
-				min-height: calc( 100vh - 13em );
+/* 				min-height: calc( 100vh - 13em ); */
 				content: '';
 				display: inline-block;
 				vertical-align: middle;
