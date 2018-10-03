@@ -1951,9 +1951,15 @@ input, select, textarea {
 	#footer h3{
 		margin-bottom: 0em;
 		margin-top:2.5em;
+		text-decoration: underline;
 	}
 	
 	#footer h4{
+		margin-bottom: 0em;
+		margin-top:1em;
+	}
+	
+	#footer h5{
 		margin-bottom: 0em;
 		margin-top:1em;
 	}
@@ -2301,11 +2307,16 @@ input, select, textarea {
 		cursor: default;
 		list-style: none;
 		padding-left: 0;
+		margin: 0em;
 	}
+		
+		ul.icons a{
+			color: #61686b;
+		}
 
 		ul.icons li {
 			display: inline-block;
-			padding: 0 1.5em 0 0;
+			padding: 4em 1.5em 0 0;
 		}
 
 			ul.icons li:last-child {
@@ -2643,6 +2654,17 @@ input, select, textarea {
 		button.primary,
 		.button.primary {
 			background-color: #8cd1a8;
+			border: 0;
+			box-shadow: none;
+			color: #ffffff !important;
+		}
+		
+		input[type="submit"].cancelinvitation,
+		input[type="reset"].cancelinvitation,
+		input[type="button"].cancelinvitation,
+		button.cancelinvitation,
+		.button.cancelinvitation {
+			background-color: #ffb164;
 			border: 0;
 			box-shadow: none;
 			color: #ffffff !important;
@@ -3167,3 +3189,9 @@ div.lista ul.lista{
 	background:none!important;
 	height:100%	
 }	
+
+span.hotellialennus{
+	text-decoration: underline;
+	font-weight: bold;
+	font-family: monospace;
+}

@@ -1,9 +1,21 @@
 $(document).ready(function() {
 
+	$('#peruuttaminen').click(function() {
+
+		$('input[name=peruuttaminen]').val('X');
+		ilmoittautuminen();
+
+	});
+	
 	$('#ilmoittautuminen').click(function() {
 
-		$('#ilmoittautuminen').prop("disabled",true);
+		ilmoittautuminen();
+
+	});
+	
+	function ilmoittautuminen(){
 		
+		$('.ilmoittautumisnappi').prop("disabled",true);
 		$('#loading').show();
 		
 		$.post("/email", $("#lomake").serialize()).done(function() {
@@ -11,13 +23,12 @@ $(document).ready(function() {
 			$('#lomake').hide();
 			$('#loading').hide();
 		}).fail(function(error) {
-			$('#ilmoittautuminen').prop("disabled",false);
+			$('ilmoittautumisnappi').prop("disabled",false);
 			console.log(error);
 			$('.error').show();
 			$('#loading').hide();			
 		});
-
-	});
+	}
 
 	if (!window.location.href.includes("paivallinen")) {
 		$('.paivallinen').hide();
