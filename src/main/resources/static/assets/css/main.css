@@ -1966,18 +1966,22 @@ input, select, textarea {
 
 	header.major {
 		text-align: center;
+		text-shadow: 2px 2px #00000087;
 	}
 
 		header.major h1, header.major h2, header.major h3, header.major h4, header.major h5, header.major h6 {
 			position: relative;
 		}
 
-			header.major h1:after, header.major h2:after, header.major h3:after, header.major h4:after, header.major h5:after, header.major h6:after {
+			header.major h1:after, header.major h3:after, header.major h4:after, header.major h5:after, header.major h6:after {
 				background: #dddddd;
+			}
+			
+			header.major h1:after, header.major h2:after, header.major h3:after, header.major h4:after, header.major h5:after, header.major h6:after {
 				content: '';
 				display: block;
 				height: 2px;
-				margin: 0.75em auto 0 auto;
+				margin: 0.75em auto 0.75em auto;
 				position: relative;
 				width: 4em;
 			}
