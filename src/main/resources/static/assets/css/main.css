@@ -1966,18 +1966,14 @@ input, select, textarea {
 
 	header.major {
 		text-align: center;
-		text-shadow: 2px 2px #00000087;
 	}
 
 		header.major h1, header.major h2, header.major h3, header.major h4, header.major h5, header.major h6 {
 			position: relative;
 		}
-
-			header.major h1:after, header.major h3:after, header.major h4:after, header.major h5:after, header.major h6:after {
-				background: #dddddd;
-			}
 			
 			header.major h1:after, header.major h2:after, header.major h3:after, header.major h4:after, header.major h5:after, header.major h6:after {
+				background: #dddddd;
 				content: '';
 				display: block;
 				height: 2px;
@@ -2835,6 +2831,11 @@ input, select, textarea {
 
 			#header header h1, #header header h2, #header header h3, #header header h4, #header header h5, #header header h6, #header header strong, #header header b {
 				color: #ffffff;
+				text-shadow: 1px 1px #00000087;
+			}
+			
+			#header header h2:after{
+				background-color: transparent ;
 			}
 
 			#header header a {
