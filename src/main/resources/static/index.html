@@ -190,7 +190,7 @@
 						</header>
 						
 						<p>Ilmottaudu juhlaan 16.12.2018 mennessä tai paikkasi viedään! Jos syystä tai toisesta et kykene ilmoittamaan osallistumisestasi ennen tätä päivämäärää, ota yhteyttä hääpariin, Tittaan tai Olliin.</p>
-						
+												
 						<form id="lomake" method="post" action="/email">
 							<div class="row gtr-uniform">
 								<div class="col-12 col-12-xsmall"><input type="text" name="name" id="name" placeholder="nimi" /></div>
@@ -217,6 +217,9 @@
 								
 								<div class="col-12"><textarea name="message" id="message" placeholder="Vapaamuotoinen ilmoitus" rows="4"></textarea></div>
 								<div class="col-12">
+									<div id="ilmovaatimus" class="wrongdata" style="display:none">Vähintään nimi on annettava.</div>
+									<div id="ilmosuccess" class="success" style="display:none">Ilmoittautuminen onnistui!</div>
+									<div id="ilmoerror" class="error" style="display:none">Ilmoittautumisen lähettämisessä tapahtui virhe! Ota yhteyttä Olliin tai Tittaan :(</div>
 									<ul class="actions special">
 										<li><input id="ilmoittautuminen" type="button" value="Ilmoittaudu juhliin" class="primary ilmoittautumisnappi" /></li>
 									</ul>
@@ -224,6 +227,7 @@
 								<br/><br/><br/><br/>
 								<div class="col-12">
 									<input type="hidden" name="peruuttaminen" value=""/>
+									<input type="hidden" name="sivustotyyppi"/>
 									
 									<ul class="actions special">
 										<li><input id="peruuttaminen" type="button" value="Emme pääse juhlimaan" class="cancelinvitation ilmoittautumisnappi" /></li>
@@ -234,12 +238,7 @@
 								</div>
 							</div>
 						</form>
-						<div class="success" style="display:none">
-							Ilmoittautuminen onnistui!
-						</div>
-						<div class="error" style="display:none">
-							Ilmoittautumisen lähettämisessä tapahtui virhe! Ota yhteyttä Olliin tai Tittaan :(
-						</div>
+						
 					</div>
 					<a href="#footer" class="goto-next scrolly">Next</a>
 				</div>

@@ -2753,8 +2753,13 @@ input, select, textarea {
 			.main .container .error, .main .container .success {
 				padding: 2em 1em 2em 1em ;
 			}
+			
+			.main .container .wrongdata {
+				padding: 1em 1em 1em 1em ;
+				margin-bottom: 1em;
+			}
 		
-			.main .container .error {
+			.main .container .error, .main .container .wrongdata {
 				background-color: #ff8a8a;	
 				color: #ffffff;
 			}

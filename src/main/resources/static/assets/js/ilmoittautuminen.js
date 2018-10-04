@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+	$('input[name=sivustotyyppi]').val(window.location.href.includes("paivallinen") ? "paivallinen" : "illallinen");
+	
 	$('#peruuttaminen').click(function() {
 
 		$('input[name=peruuttaminen]').val('X');
@@ -9,23 +11,32 @@ $(document).ready(function() {
 	
 	$('#ilmoittautuminen').click(function() {
 
+		$('input[name=peruuttaminen]').val('');
 		ilmoittautuminen();
 
 	});
 	
 	function ilmoittautuminen(){
+				
+		$('#ilmovaatimus').hide();
+		
+		if($('#name').val().trim().length == 0){
+			$('#ilmovaatimus').show();
+			return
+		}
 		
 		$('.ilmoittautumisnappi').prop("disabled",true);
 		$('#loading').show();
 		
 		$.post("/email", $("#lomake").serialize()).done(function() {
-			$('.success').show();
-			$('#lomake').hide();
+			$('#ilmosuccess').show();
+			$('#lomake input, #lomake textarea').prop("disabled", true);
 			$('#loading').hide();
+			$('.ilmoittautumisnappi').hide();
 		}).fail(function(error) {
 			$('ilmoittautumisnappi').prop("disabled",false);
 			console.log(error);
-			$('.error').show();
+			$('#ilmoerror').show();
 			$('#loading').hide();			
 		});
 	}
