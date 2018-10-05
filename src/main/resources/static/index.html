@@ -298,7 +298,12 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/ilmoittautuminen.js"></script>
-			
+			<script type="text/javascript">  
+			    var versionUpdate = (new Date()).getTime();  
+			    var script = document.createElement("script");  
+			    script.type = "text/javascript";  
+			    script.src = "assets/js/ilmoittautuminen.js?v=" + versionUpdate;  
+			    document.body.appendChild(script);  
+			</script> 
 	</body>
 </html>
