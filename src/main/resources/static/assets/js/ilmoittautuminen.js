@@ -1,6 +1,6 @@
 $(document).ready(function() {
-
-	$('input[name=sivustotyyppi]').val(window.location.href.includes("paivallinen") ? "paivallinen" : "illallinen");
+	
+	$('input[name=sivustotyyppi]').val(window.location.href.indexOf("paivallinen") > 0 ? "paivallinen" : "illallinen");
 	
 	$('#peruuttaminen').click(function() {
 
@@ -41,7 +41,7 @@ $(document).ready(function() {
 		});
 	}
 
-	if (!window.location.href.includes("paivallinen")) {
+	if (window.location.href.indexOf("paivallinen") < 0) {
 		$('.paivallinen').hide();
 		$('.illallinen').show();
 		
